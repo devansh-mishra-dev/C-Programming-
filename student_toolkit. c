@@ -1,0 +1,125 @@
+
+#include <stdio.h>
+
+void calculator(void) {
+    double a, b;
+    char op;
+
+    printf("\nEnter an expression (e.g. 10 + 5): ");
+
+    if (scanf("%lf %c %lf", &a, &op, &b) != 3) {
+        printf("Invalid input.\n");
+        return;
+    }
+
+    switch (op) {
+        case '+':
+            printf("Result: %.2lf\n", a + b);
+            break;
+        case '-':
+            printf("Result: %.2lf\n", a - b);
+            break;
+        case '*':
+            printf("Result: %.2lf\n", a * b);
+            break;
+        case '/':
+            if (b == 0)
+                printf("Error: Division by zero!\n");
+            else
+                printf("Result: %.2lf\n", a / b);
+            break;
+        default:
+            printf("Invalid operator.\n");
+    }
+}
+
+void gradeCalculator(void) {
+    float marks[5], total = 0, percentage;
+    int i;
+
+    for (i = 0; i < 5; i++) {
+        printf("Enter marks for subject %d (0-100): ", i + 1);
+
+        if (scanf("%f", &marks[i]) != 1 ||
+            marks[i] < 0 || marks[i] > 100) {
+            printf("Invalid marks.\n");
+            return;
+        }
+
+        total += marks[i];
+    }
+
+    percentage = total / 5;
+
+    printf("\nTotal Marks: %.2f / 500\n", total);
+    printf("Percentage: %.2f%%\n", percentage);
+
+    if (percentage >= 90)
+        printf("Grade: A+\n");
+    else if (percentage >= 80)
+        printf("Grade: A\n");
+    else if (percentage >= 70)
+        printf("Grade: B\n");
+    else if (percentage >= 60)
+        printf("Grade: C\n");
+    else if (percentage >= 40)
+        printf("Grade: D\n");
+    else
+        printf("Grade: F\n");
+}
+
+void temperatureConverter(void) {
+    double celsius, fahrenheit;
+
+    printf("Enter temperature in Celsius: ");
+
+    if (scanf("%lf", &celsius) != 1) {
+        printf("Invalid temperature.\n");
+        return;
+    }
+
+    fahrenheit = (celsius * 9.0 / 5.0) + 32.0;
+
+    printf("Temperature in Fahrenheit: %.2lf F\n",
+           fahrenheit);
+}
+
+int main(void) {
+    int choice;
+
+    do {
+        printf("\n============================\n");
+        printf("     SMART STUDENT TOOLKIT\n");
+        printf("============================\n");
+        printf("1. Basic Calculator\n");
+        printf("2. Student Grade Calculator\n");
+        printf("3. Celsius to Fahrenheit\n");
+        printf("4. Exit\n");
+        printf("Enter your choice: ");
+
+        if (scanf("%d", &choice) != 1) {
+            printf("Invalid input. Exiting.\n");
+            return 1;
+        }
+
+        switch (choice) {
+            case 1:
+                calculator();
+                break;
+            case 2:
+                gradeCalculator();
+                break;
+            case 3:
+                temperatureConverter();
+                break;
+            case 4:
+                printf("Thank you for using the toolkit!\n");
+                break;
+            default:
+                printf("Invalid choice. Please try again.\n");
+        }
+
+    } while (choice != 4);
+
+    return 0;
+}

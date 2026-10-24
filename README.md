@@ -1,31 +1,83 @@
-# C-Programming-
-A collection of C programming projects and practice programs covering fundamental concepts, problem-solving, and practical applications. Built to strengthen programming skills through hands-on learning as a B.Tech student.
-Smart Student Toolkit in C
+C Programming Projects
 
-About
+Welcome to my C Programming Projects repository! 👋
 
-Smart Student Toolkit is a beginner-friendly, menu-driven C programming project created as part of my B.Tech first-year programming practice.
+I am a first-year B.Tech student learning C programming and developing practical projects to improve my coding skills, logical thinking, and problem-solving abilities.
+
+This repository contains beginner-friendly C projects built using fundamental programming concepts.
+
+📂 Projects Included
+
+1. Personal Expense Tracker
+
+A menu-driven application that helps users record and analyse their daily expenses.
 
 Features
 
-- Basic arithmetic calculator
-- Student grade calculator
-- Temperature converter
-- Simple menu-driven interface
-- Input validation
+- Add expenses with different categories.
+- Categorize spending into Food, Travel, Education, and Other.
+- Display recorded expenses.
+- Calculate total and average spending.
+- Identify the highest individual expense.
+- Validate expense amounts and categories.
 
-Concepts Used
+File: "expense_tracker.c"
 
+2. Smart Student Toolkit
+
+A collection of useful student utilities combined into a single menu-driven C application.
+
+Features
+
+- Basic Calculator: Addition, subtraction, multiplication, and division.
+- Student Grade Calculator: Calculate total marks, percentage, and grades for five subjects.
+- Temperature Converter: Convert Celsius to Fahrenheit.
+- Interactive console menu.
+- Basic input validation and division-by-zero handling.
+
+File: "student_toolkit.c"
+
+🛠️ Technologies Used
+
+- Programming Language: C
+- Compiler: GCC
+- Header File: "stdio.h"
+
+Concepts Practised
+
+- Variables and data types
+- Operators and expressions
+- Conditional statements ("if-else")
+- Loops ("for", "do-while")
 - Functions
-- Loops
-- Conditional statements
-- Switch-case
 - Arrays
-- User input and output
+- "switch-case"
+- Standard input and output
+- Basic input validation
 
-How to Run
+🚀 Getting Started
 
-Compile using GCC:
+Prerequisites
+
+Install a C compiler such as GCC.
+
+Compile and Run the Expense Tracker
+
+Compile:
+
+gcc expense_tracker.c -o expense_tracker
+
+Run on Linux or macOS:
+
+./expense_tracker
+
+On Windows, run:
+
+expense_tracker.exe
+
+Compile and Run the Student Toolkit
+
+Compile:
 
 gcc student_toolkit.c -o student_toolkit
 
@@ -33,22 +85,45 @@ Run on Linux or macOS:
 
 ./student_toolkit
 
-On Windows:
+On Windows, run:
 
 student_toolkit.exe
 
-Learning Objective
+📁 Repository Structure
 
-The purpose of this project is to improve my understanding of C programming fundamentals and develop problem-solving skills through practical implementation.
+c-programming/
+├── expense_tracker.c
+├── student_toolkit.c
+└── README.md
 
-Future Improvements
+🎯 Learning Objectives
 
-- Add a scientific calculator
-- Save student records to a file
-- Add more unit conversions
+The main objective of these projects is to apply theoretical C programming concepts to practical problems. Through these projects, I am learning to organize code, implement program logic, handle user input, and build useful console applications.
 
-Author
+🔮 Future Improvements
 
-B.Tech First-Year Student
+- Add file handling to save expenses permanently.
+- Introduce monthly budgets and spending reports.
+- Save student records and academic results.
+- Add more calculator operations and unit conversions.
+- Improve input validation and user experience.
 
-This project is created for educational and learning purposes.
+⚠️ Current Limitations
+
+These are beginner-level, console-based applications. The Expense Tracker supports up to 100 expense entries per session, and neither project currently saves data permanently.
+
+👨‍💻 About Me
+
+I am a first-year B.Tech student exploring programming, software development, and problem-solving through hands-on projects.
+
+I created this repository as part of my journey to learn, practise, and grow as a developer.
+
+🤝 Contributions
+
+Suggestions and feedback are welcome. Feel free to explore the code and suggest improvements.
+
+---
+
+⭐ If you find these projects useful, consider starring this repository!
+
+Built with C and curiosity.
